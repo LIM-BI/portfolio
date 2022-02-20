@@ -15,7 +15,158 @@
     <script src="main.js" defer></script>
 <!-- font-family: 'Noto Sans KR', sans-serif; -->
 </head>
+<style>
+    .navbar__logo__img {
+        width: 40px;
+        height: 40px;
+    }
+</style>
 <body>
-    sadasd
+    <!-- navbar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <img src="./imgs/logo_flower.png" alt="can not find the image" class="navbar__logo__img">
+            Lily
+        </div>
+        <div class="navbar__menu">
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item">Home</li>
+                <li class="navbar__menu__item">About</li>
+                <li class="navbar__menu__item">Skills</li>
+                <li class="navbar__menu__item">My work</li>
+                <li class="navbar__menu__item">Testimonial</li>
+                <li class="navbar__menu__item">Contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="about">
+        <img src="./imgs/me.jpg" alt="Lily's profile photo" class="home__avatar">
+        <h1 class="home__title">Hello, <br>I'm Eunbi</h1>
+        <h2 class="home__description">description</h2>
+        <button class="home__contact">contact me</button>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h1>About me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor laborum accusantium, accusamus sint voluptatum corrupti asperiores, deserunt, at quo animi numquam quos illum. Officia alias eum facere aliquid debitis?</p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="major__title">HTML</div>
+                <div class="major__description">html</div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="major__title">HTML</div>
+                <div class="major__description">html</div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="major__title">HTML</div>
+                <div class="major__description">html</div>
+            </div>
+        </div>
+        <div class="about__jobs">
+            <div class="job">
+                <img src="" alt="" class="job__logo">
+                <p class="job__name">휴먼교육센터</p>
+                <p class="job__period">2021.05.10 ~ 2021.09.27</p>
+            </div>
+            <div class="job">
+                <img src="" alt="" class="job__logo">
+                <p class="job__name">휴먼교육센터</p>
+                <p class="job__period">2021.05.10 ~ 2021.09.27</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati iste aperiam, alias tempore voluptate a commodi sunt minus? Natus eum temporibus quia aliquid libero amet tempora saepe veritatis quasi molestias!
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset__title">Skills</h3>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>HTML</span>
+                        <span>99%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <h3 class="skillset__title">Tools</h3>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>IntelliJ</span></li>
+                        <li><span>Android Studio Code</span></li>
+                        <li><span>iOS development tools</span></li>
+                        <li><span>Sketch app</span></li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <h3 class="skillset_title">Etc</h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+            <button class="category__btn">All <span class="category__count">8</span></button>
+            <button class="category__btn">Front-end <span class="category__count">1</span></button>
+            <button class="category__btn">Back-end <span class="category__count">1</span></button>
+            <button class="category__btn">Mobile <span class="category__count">1</span></button>
+        </div>
+        <div class="work__projects">
+            <a href="" class="project" target="blank">
+                <img src="./imgs/me.jpg" alt="" class="project__img">
+                <div class="project__description">
+                    <h3>gallery site</h3>
+                    <span>clone coding</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <!-- <section id="testimonials"></section> -->
+    
+    <!-- Contact -->
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">ever3622@naver.com</h2>
+        <div class="contact__links">
+            <a href="">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p class="contact__rights">
+            2022 Lily Coding - All rights reserved
+        </p>
+    </section>
+
 </body>
 </html>
