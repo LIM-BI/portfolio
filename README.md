@@ -1,3 +1,58 @@
+# transition [click](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)
+
+```CSS
+    transition: background-color 300ms linear;
+    transition: all 200ms ease;
+```
+
+애니메이션 효과 [click](https://cubic-bezier.com/)
+
+# transform
+
+```CSS
+    transform: scale(1.2); 1.2배 커짐
+    trnasform: rotate(45deg); 돌아간다.
+    transform: translate(20%, 20%); 자신의 크기에서 20%
+
+```
+
+# position
+
+- relative -> 부모 컨테이너 안에서 적용 다른 요소들의 레이아웃에 변화를 주지 않는다.
+- absolute -> 스테틱이 아닌 컨테이너 안에서 적용. 기존 요소들의 레이아웃에 변화를 준다.
+- sticky -> 현재 컨테이너 안에서 적용 (top, left 필수)
+- fixed -> body안에서 적용
+
+# background
+
+```CSS
+    .box1 {
+        background-image: url();
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .box2 { //위에 효과들을 한번에 적용
+        background: center/cover no-repeat url();
+    }
+```
+
+공부자료 1.[click](https://developer.mozilla.org/en-US/docs/Web/CSS/background) 2.[click](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+
+# translate을 이용하여 가운데 정렬
+
+```CSS
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    transform: translate(-50%, -50%);
+}
+```
+
 # BEM (Block, Element, Modifier)
 
 - 클래스 이름을 작성하는 방법에 대해서 정의한 규칙
