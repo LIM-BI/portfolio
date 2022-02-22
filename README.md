@@ -16,7 +16,7 @@
 
 ```
 
-# position
+# position [click](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 - relative -> 부모 컨테이너 안에서 적용 다른 요소들의 레이아웃에 변화를 주지 않는다.
 - absolute -> 스테틱이 아닌 컨테이너 안에서 적용. 기존 요소들의 레이아웃에 변화를 준다.
