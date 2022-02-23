@@ -425,7 +425,7 @@ p {
     display: block;
   }
 
-  #navber {
+  #navbar {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -434,7 +434,7 @@ p {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    display: none;
+    /* display: none; */
   }
 
   .about__majors {
