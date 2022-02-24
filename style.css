@@ -35,6 +35,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -92,6 +93,28 @@ p {
     font-weight: var(--weight-regular);
     color: var(--color-black);
     margin: 4px 0;
+}
+
+#upBtn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: var(--color-white);
+    bottom: 50px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--color-pink);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--animation-duration) ease-in;
+}
+
+#upBtn.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 
@@ -359,6 +382,13 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all 200ms ease-out;
+}
+
+.work__projects.anim-out {
+    opacity: 0.6;
+    transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -370,6 +400,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.project.invisible {
+    display: none;
 }
 
 .project__img {

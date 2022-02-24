@@ -5,8 +5,6 @@
 const navbar = document.querySelector("#navbar");
 const navHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    console.log("nav" + navHeight);
     if (window.scrollY > navHeight) {
         navbar.classList.add('navbar--dark');
     } else {
@@ -24,9 +22,71 @@ navbar_menu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-    console.log(event.target.dataset.link);
 
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    scrollIntoView(link)
+
+})
+
+// contact me 버튼 누를때 이벤트
+const contactBtn = document.querySelector(".home__contact");
+contactBtn.addEventListener('click', () => {
+    scrollIntoView("#contact");
+})
+
+// 스크롤링시 홈에 투명도 주기
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+
+})
+
+const upBtn = document.querySelector("#upBtn");
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        upBtn.classList.add('visible');
+    } else {
+        upBtn.classList.remove('visible');
+    }
+})
+
+function scrollIntoView(selector) {
+    const goContact = document.querySelector(selector);
+    goContact.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+upBtn.addEventListener('click', () => {
+    scrollIntoView("#home");
+})
+
+
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projectFilterBtn = document.querySelectorAll(".category__btn");
+const projects = document.querySelectorAll(".project");
+workBtnContainer.addEventListener('click', (event) => {
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+
+    projectFilterBtn.forEach((projectBtn) => {
+        projectBtn.classList.remove('active');
+    })
+    event.target.classList.add('active');
+
+    projectContainer.classList.add('anim-out');
+
+
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if (filter === 'all' || filter === project.dataset.filter) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        })
+        projectContainer.classList.remove('anim-out');
+    }, 300);
 
 })

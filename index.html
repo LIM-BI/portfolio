@@ -44,10 +44,12 @@
 
     <!-- Home -->
     <section id="home">
-        <img src="./imgs/me.jpg" alt="Lily's profile photo" class="home__avatar">
-        <h1 class="home__title">Hello, <br>I'm Eunbi</h1>
-        <h2 class="home__description">description</h2>
-        <button class="home__contact">contact me</button>
+        <div class="home__container">
+            <img src="./imgs/me.jpg" alt="Lily's profile photo" class="home__avatar">
+            <h1 class="home__title">Hello, <br>I'm Eunbi</h1>
+            <h2 class="home__description">description</h2>
+            <button class="home__contact">contact me</button>
+        </div>
     </section>
 
     <!-- About -->
@@ -144,13 +146,27 @@
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">All <span class="category__count">8</span></button>
-                <button class="category__btn">Front-end <span class="category__count">1</span></button>
-                <button class="category__btn">Back-end <span class="category__count">1</span></button>
-                <button class="category__btn">Mobile <span class="category__count">1</span></button>
+                <button class="category__btn active" data-filter="all">All <span class="category__count">8</span></button>
+                <button class="category__btn" data-filter="front">Front-end <span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="back">Back-end <span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">1</span></button>
             </div>
             <div class="work__projects">
-                <a href="" class="project" target="blank">
+                <a href="" class="project" target="blank" data-filter="front">
+                    <img src="./imgs/me.jpg" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>gallery site</h3>
+                        <span>clone coding</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-filter="front">
+                    <img src="./imgs/me.jpg" alt="" class="project__img">
+                    <div class="project__description">
+                        <h3>gallery site</h3>
+                        <span>clone coding</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-filter="back">
                     <img src="./imgs/me.jpg" alt="" class="project__img">
                     <div class="project__description">
                         <h3>gallery site</h3>
@@ -177,7 +193,9 @@
             2022 Lily Coding - All rights reserved
         </p>
     </section>
-
+    <div id="upBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
 </body>
 
 </html>
