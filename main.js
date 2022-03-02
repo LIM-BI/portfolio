@@ -23,6 +23,7 @@ navbar_menu.addEventListener('click', (event) => {
         return;
     }
 
+
     scrollIntoView(link)
 
 })
@@ -38,7 +39,7 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
-
+    navbar_menu.classList.remove('open');
 })
 
 const upBtn = document.querySelector("#upBtn");
@@ -52,7 +53,7 @@ document.addEventListener('scroll', () => {
 
 function scrollIntoView(selector) {
     const goContact = document.querySelector(selector);
-    goContact.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    goContact.scrollIntoView({ behavior: 'smooth' });
 }
 
 upBtn.addEventListener('click', () => {
@@ -71,9 +72,9 @@ workBtnContainer.addEventListener('click', (event) => {
     }
 
     projectFilterBtn.forEach((projectBtn) => {
-        projectBtn.classList.remove('active');
+        projectBtn.classList.remove('selected');
     })
-    event.target.classList.add('active');
+    event.target.classList.add('selected');
 
     projectContainer.classList.add('anim-out');
 
@@ -89,4 +90,10 @@ workBtnContainer.addEventListener('click', (event) => {
         projectContainer.classList.remove('anim-out');
     }, 300);
 
+})
+
+// navbar toggle button
+const hamburgerMenu = document.querySelector(".navbar__toggle-btn");
+hamburgerMenu.addEventListener("click", () => {
+    navbar_menu.classList.toggle('open');
 })
