@@ -56,8 +56,29 @@
         <div class="box">20</div>
     </div>
 
-    <script></script>
+    <script>
+        const boxs = document.querySelectorAll(".box");
 
+        const options = {
+            rool: document.querySelector(".container"), // viewport
+            rootMargin: '0px',
+            threshold: 0, // 0 ~ 1 전체 다 들어왔을때 처리하게 하려면 1로 변경 (100%)
+        }
+
+        const observer = new IntersectionObserver((entries, options) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                } else {
+                    entry.target.classList.remove("active");
+                }
+            });
+        });
+
+        boxs.forEach(box => {
+            observer.observe(box);
+        });
+    </script>
 
 </body>
 
