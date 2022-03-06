@@ -118,7 +118,7 @@ function selectNavItem(seleted) {
 
 function scrollIntoView(selector) {
     const goContact = document.querySelector(selector);
-    goContact.scrollIntoView({ behavior: 'smooth' });
+    goContact.scrollIntoView({ 'behavior': 'smooth' });
     selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
